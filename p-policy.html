@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Money Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            padding: 0 2rem 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0 -2rem 3rem;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #5a6c7d;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 100px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .content-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e8ecf4;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .content-card h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .content-card p {
+            margin-bottom: 1rem;
+            color: #5a6c7d;
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e8ecf4;
+            position: relative;
+            padding-left: 2rem;
+            color: #5a6c7d;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .use-case {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecf4 100%);
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .use-case h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .security-grid, .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .security-item, .right-item {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecf4 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .security-item:hover, .right-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .security-item h3, .right-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecf4 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item strong {
+            color: #667eea;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #667eea;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav {
+                justify-content: center;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .main-content {
+                padding: 0 1rem 1rem;
+            }
+
+            .hero {
+                margin: 0 -1rem 2rem;
+                padding: 2rem 1rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+
+            .security-grid, .rights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .nav {
+                gap: 1rem;
+            }
+
+            .nav-link {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>Money Manager</h1>
+            </div>
+            <nav class="nav">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#data-collection" class="nav-link">Data Collection</a>
+                <a href="#data-use" class="nav-link">Data Use</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="hero">
+                <h1 class="hero-title">Privacy Policy</h1>
+                <p class="hero-subtitle">Your privacy is important to us. This policy explains how we collect, use, and protect your information.</p>
+                <div class="last-updated">Last updated: August 17, 2025</div>
+            </section>
+
+            <section id="overview" class="section">
+                <h2 class="section-title">Overview</h2>
+                <div class="content-card">
+                    <p>Money Manager is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, store, and protect your data when you use our mobile application.</p>
+                    <p>By using Money Manager, you agree to the collection and use of information in accordance with this policy.</p>
+                </div>
+            </section>
+
+            <section id="data-collection" class="section">
+                <h2 class="section-title">Information We Collect</h2>
+                <div class="content-card">
+                    <h3>Personal Information</h3>
+                    <ul class="feature-list">
+                        <li>Account information (email address, name) when you sign up</li>
+                        <li>Financial data you input (transactions, budgets, categories)</li>
+                        <li>Device information (device type, operating system version)</li>
+                        <li>Usage data (app interactions, features used)</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Automatically Collected Information</h3>
+                    <ul class="feature-list">
+                        <li>App usage analytics and performance data</li>
+                        <li>Crash reports and error logs</li>
+                        <li>Device identifiers for authentication</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="data-use" class="section">
+                <h2 class="section-title">How We Use Your Information</h2>
+                <div class="content-card">
+                    <div class="use-case">
+                        <h3>App Functionality</h3>
+                        <p>We use your data to provide core app features including transaction tracking, budget management, and financial insights.</p>
+                    </div>
+                    <div class="use-case">
+                        <h3>Account Security</h3>
+                        <p>Your information helps us authenticate your identity and protect your account from unauthorized access.</p>
+                    </div>
+                    <div class="use-case">
+                        <h3>App Improvement</h3>
+                        <p>Anonymous usage data helps us improve app performance and develop new features.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Data Security</h2>
+                <div class="content-card">
+                    <div class="security-grid">
+                        <div class="security-item">
+                            <h3>Encryption</h3>
+                            <p>All data is encrypted in transit and at rest using industry-standard encryption protocols.</p>
+                        </div>
+                        <div class="security-item">
+                            <h3>Access Control</h3>
+                            <p>Strict access controls ensure only authorized personnel can access your data.</p>
+                        </div>
+                        <div class="security-item">
+                            <h3>Regular Audits</h3>
+                            <p>We conduct regular security audits to identify and address potential vulnerabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Your Rights</h2>
+                <div class="content-card">
+                    <div class="rights-grid">
+                        <div class="right-item">
+                            <h3>Access</h3>
+                            <p>Request a copy of your personal data</p>
+                        </div>
+                        <div class="right-item">
+                            <h3>Correction</h3>
+                            <p>Update or correct your information</p>
+                        </div>
+                        <div class="right-item">
+                            <h3>Deletion</h3>
+                            <p>Request deletion of your account and data</p>
+                        </div>
+                        <div class="right-item">
+                            <h3>Portability</h3>
+                            <p>Export your data in a readable format</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Third-Party Services</h2>
+                <div class="content-card">
+                    <p>Money Manager integrates with the following third-party services:</p>
+                    <ul class="feature-list">
+                        <li><strong>Google Sign-In:</strong> For secure authentication</li>
+                        <li><strong>Firebase:</strong> For data storage and analytics</li>
+                        <li><strong>Google Analytics:</strong> For app usage insights</li>
+                    </ul>
+                    <p>These services have their own privacy policies, which we encourage you to review.</p>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="content-card">
+                    <p>If you have questions about this Privacy Policy or your data, please contact us:</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>Email:</strong> privacy@moneymanager.app
+                        </div>
+                        <div class="contact-item">
+                            <strong>Address:</strong> Money Manager Privacy Team<br>
+                            123 Finance Street<br>
+                            Tech City, TC 12345
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Money Manager. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Support</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
